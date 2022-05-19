@@ -5,14 +5,15 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace WebAPI.Controllers
+namespace WebApplication1.Controllers
 {
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public HttpResponseMessage Get()
         {
-            return new string[] { "value1", "value2" };
+           var retVal = new { key1 = "value1", key2 = "value2" };
+            return Request.CreateResponse(HttpStatusCode.OK,retVal);
         }
 
         // GET api/values/5
