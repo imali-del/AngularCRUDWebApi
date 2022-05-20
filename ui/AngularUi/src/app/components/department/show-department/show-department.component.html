@@ -22,7 +22,7 @@ data-backdrop="static" data-keyboard="false"
         <td>{{dataItem.DepartmentId}}</td>
         <td>{{dataItem.DepartmentName}}</td>
         <td>
-            <button class="btn btn-light mr-1" (click)="editClick(dataItem)">Edit</button>
+            <button class="btn btn-light mr-1" data-toggle="modal" data-target="#exampleModal" (click)="editClick(dataItem)">Edit</button>
             <button class="btn btn-light mr-1" (click)="deleteClick(dataItem)">Delete</button>
         </td>
       </tr>

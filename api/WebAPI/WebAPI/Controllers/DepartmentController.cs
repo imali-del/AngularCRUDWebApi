@@ -13,6 +13,7 @@ namespace WebApplication1.Controllers
 {
     public class DepartmentController : ApiController
     {
+        [HttpGet]
         public HttpResponseMessage Get()
         {
             string query = @"
@@ -34,6 +35,7 @@ namespace WebApplication1.Controllers
 
         }
 
+        [HttpPost]
         public string Post(Department dep)
         {
             try
@@ -62,7 +64,7 @@ namespace WebApplication1.Controllers
             }
         }
 
-
+        [HttpPut]
         public string Put(Department dep)
         {
             try
@@ -92,7 +94,7 @@ namespace WebApplication1.Controllers
             }
         }
 
-
+        [HttpDelete]
         public string Delete(int id)
         {
             try

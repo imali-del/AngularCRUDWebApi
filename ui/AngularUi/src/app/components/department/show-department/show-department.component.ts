@@ -45,7 +45,7 @@ export class ShowDepartmentComponent implements OnInit {
   
   editClick(item:any){
     debugger
-    this.dep = item
+    this.dep = item;
     this.ModalTitle = "Edit Department";
     this.ActivateAddEditDepComp = true;
   }

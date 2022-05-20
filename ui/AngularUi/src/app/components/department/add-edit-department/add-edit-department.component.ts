@@ -1,6 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { SharedService } from 'src/app/services/shared.service';
-import { Observable,Subject } from 'rxjs';
 
 @Component({
   selector: 'app-add-edit-department',
@@ -12,7 +11,6 @@ export class AddEditDepartmentComponent implements OnInit {
 @Input() dep:any;
 DepartmentId!:number;
 DepartmentName!:string;
-private subject = new Subject<any>();
 closeModel:boolean = false;
   constructor(private sharedService : SharedService) { }
 
@@ -29,7 +27,6 @@ closeModel:boolean = false;
     };
 
     this.sharedService.addDepartment(val).subscribe((response) => alert(response));
-    this.subject.next(this.closeModel);
   }
 
   updateDepartment(){
@@ -40,10 +37,7 @@ closeModel:boolean = false;
     };
 
     this.sharedService.updateDepartment(val).subscribe((response) => alert(response));
-    this.subject.next(this.closeModel);
+    
   }
 
-  closeModelwindow(): Observable<any>{
-    return this.subject.asObservable();
-  }
 }

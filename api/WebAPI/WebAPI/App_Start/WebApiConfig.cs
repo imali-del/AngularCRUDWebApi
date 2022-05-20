@@ -26,7 +26,7 @@ namespace WebAPI
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 
             //Enable Cors
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            config.EnableCors(new EnableCorsAttribute("*","*","*"));
         }
     }
 }
