@@ -15,8 +15,8 @@ const httpOptions = {
 })
 export class SharedService {
  
-private apiUrl = 'http://localhost:51758/api';
-private photoUrl = 'http://localhost:51758/Photos';
+private readonly apiUrl = 'http://localhost:51758/api';
+readonly photoUrl = 'http://localhost:51758/Photos/';
   constructor(private http:HttpClient) { 
   }
   
@@ -30,11 +30,11 @@ private photoUrl = 'http://localhost:51758/Photos';
 
   updateDepartment(val:any){
     debugger
-    return this.http.put<any>(this.apiUrl+'/Department',val,httpOptions);
+    return this.http.put<any>(this.apiUrl+'/Department',val);
   }
 
   deleteDepartment(val:any){
-    return this.http.delete<any>(this.apiUrl+'/Department/'+ val,httpOptions);
+    return this.http.delete<any>(this.apiUrl+'/Department/'+ val);
   }
 
 
@@ -58,6 +58,7 @@ private photoUrl = 'http://localhost:51758/Photos';
 
 
   UploadPhoto(val:any){
+    debugger
     return this.http.post(this.apiUrl+'/Employee/SaveFile',val);
   }
 
