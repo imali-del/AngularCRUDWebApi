@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\Sites\AngularDotNetWebAPI</_PublishTargetUrl>
-    <History>True|2022-05-20T06:56:00.9840020Z;True|2022-05-20T11:21:25.8183446+05:00;True|2022-05-20T11:19:36.6240924+05:00;True|2022-05-20T11:16:18.8225127+05:00;True|2022-05-20T11:02:27.4768101+05:00;True|2022-05-20T10:59:39.0616272+05:00;True|2022-05-20T10:59:01.6178947+05:00;False|2022-05-20T10:57:58.5187362+05:00;True|2022-05-20T10:55:34.7748052+05:00;True|2022-05-20T10:54:39.5344104+05:00;True|2022-05-20T10:43:03.1340059+05:00;True|2022-05-20T10:21:14.0190134+05:00;</History>
+    <History>True|2022-05-20T12:26:05.6583454Z;True|2022-05-20T17:15:30.1945141+05:00;True|2022-05-20T17:09:57.1735775+05:00;True|2022-05-20T17:08:15.3418787+05:00;True|2022-05-20T16:53:37.6204485+05:00;True|2022-05-20T16:34:47.8437088+05:00;True|2022-05-20T11:56:00.9840020+05:00;True|2022-05-20T11:21:25.8183446+05:00;True|2022-05-20T11:19:36.6240924+05:00;True|2022-05-20T11:16:18.8225127+05:00;True|2022-05-20T11:02:27.4768101+05:00;True|2022-05-20T10:59:39.0616272+05:00;True|2022-05-20T10:59:01.6178947+05:00;False|2022-05-20T10:57:58.5187362+05:00;True|2022-05-20T10:55:34.7748052+05:00;True|2022-05-20T10:54:39.5344104+05:00;True|2022-05-20T10:43:03.1340059+05:00;True|2022-05-20T10:21:14.0190134+05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -201,10 +201,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
     <File Include="bin/WebAPI.dll">
-      <publishTime>05/20/2022 11:56:00</publishTime>
+      <publishTime>05/20/2022 17:26:05</publishTime>
     </File>
     <File Include="bin/WebAPI.pdb">
-      <publishTime>05/20/2022 11:56:00</publishTime>
+      <publishTime>05/20/2022 17:26:05</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -256,6 +256,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Global.asax">
       <publishTime>05/19/2022 10:31:45</publishTime>
+    </File>
+    <File Include="Photos/anonymous.png">
+      <publishTime>05/20/2022 15:23:30</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>05/19/2022 10:31:47</publishTime>

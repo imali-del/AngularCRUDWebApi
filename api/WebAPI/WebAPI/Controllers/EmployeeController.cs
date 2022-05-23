@@ -104,7 +104,7 @@ namespace WebApplication1.Controllers
             }
         }
 
-
+        [Route("api/Employee/DeleteEmployee")]
         public string Delete(int id)
         {
             try

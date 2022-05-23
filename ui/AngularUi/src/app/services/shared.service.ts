@@ -4,10 +4,7 @@ import { Observable } from 'rxjs';
 import { DepartmentList } from '../components/department/Department';
 
 const httpOptions = {
- headers : new HttpHeaders({
-   'Content-Type':'application/json',
- }), 
-
+  headers: new HttpHeaders({'Access-Control-Allow-Origin':'*',})
 };
 
 @Injectable({
@@ -30,16 +27,15 @@ readonly photoUrl = 'http://localhost:51758/Photos/';
 
   updateDepartment(val:any){
     debugger
-    return this.http.put<any>(this.apiUrl+'/Department',val);
+    return this.http.put<any>(this.apiUrl+'/Department',val,httpOptions);
   }
 
   deleteDepartment(val:any){
-    return this.http.delete<any>(this.apiUrl+'/Department/'+ val);
+    return this.http.delete<any>(this.apiUrl+'/Department/'+ val,httpOptions);
   }
 
 
   getEmpList():Observable<any[]>{
-    debugger
     const url = this.apiUrl+ '/Employee';
     return this.http.get<any[]>(this.apiUrl+'/Employee');
   }
@@ -58,12 +54,11 @@ readonly photoUrl = 'http://localhost:51758/Photos/';
 
 
   UploadPhoto(val:any){
-    debugger
     return this.http.post(this.apiUrl+'/Employee/SaveFile',val);
   }
 
   getAllDepartmentNames():Observable<any[]>{
-    return this.http.get<any[]>(this.apiUrl+'/Employee/GetAllDepartmentNames');
+    return this.http.get<any[]>(this.apiUrl+'/Employee/GetAllDepartmentNames',);
   }
 
 }

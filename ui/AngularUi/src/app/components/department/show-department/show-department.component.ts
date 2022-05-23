@@ -13,7 +13,8 @@ export class ShowDepartmentComponent implements OnInit {
   ModalTitle!:string;
   dep:any;
   ActivateAddEditDepComp:boolean= false;
-  
+
+
   constructor(private sharedService:SharedService) {
   //   this.subscription = this.addEditComponent.closeModelwindow().subscribe((response) => {
   //     if(response)
@@ -29,7 +30,7 @@ export class ShowDepartmentComponent implements OnInit {
   }
   
   refereshDeptList(){
-    this.sharedService.getDepList().subscribe((data) => this.DepartmentList = data);
+    this.sharedService.getDepList().subscribe((data) => {this.DepartmentList = data});
   }
 
   addClick(){
@@ -62,4 +63,6 @@ export class ShowDepartmentComponent implements OnInit {
     this.ActivateAddEditDepComp = false;
     this.refereshDeptList();
   }
+
+ 
 }

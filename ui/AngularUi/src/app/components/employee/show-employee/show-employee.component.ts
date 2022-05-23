@@ -13,6 +13,11 @@ export class ShowEmployeeComponent implements OnInit {
   ModalTitle!:string
   emp:any;
   ActivateAddEditEmpComp:boolean = false;
+
+  EmployeeIdFilter : string = '';
+  EmployeeNameFilter : string = '';
+  EmployeeListWithoutFilter:any[] = [];
+
   constructor(private sharedService:SharedService) { }
 
   ngOnInit(): void {
@@ -20,7 +25,11 @@ export class ShowEmployeeComponent implements OnInit {
   }
    
   showEmpList() {
-    this.sharedService.getEmpList().subscribe((data) => this.EmployeeList = data);
+    this.sharedService.getEmpList().subscribe((data) => {
+      debugger
+      this.EmployeeList = data;
+      this.EmployeeListWithoutFilter = data;
+    });
   }
 
   addClick(){
@@ -53,5 +62,31 @@ export class ShowEmployeeComponent implements OnInit {
   closeClick(){
     this.ActivateAddEditEmpComp = false;
     this.showEmpList();
+  }
+
+  filterFn(){
+    debugger
+    var EmployeeIdFilter = this.EmployeeIdFilter;
+    var EmployeeNameFilter = this.EmployeeNameFilter;
+
+    this.EmployeeList = this.EmployeeListWithoutFilter.filter(function (el){
+      return el.EmployeeId.toString().toLowerCase().includes(
+        EmployeeIdFilter.toString().trim().toLowerCase()
+      )&&
+      el.EmployeeName.toString().toLowerCase().includes(
+        EmployeeNameFilter.toString().trim().toLowerCase()
+      )
+  });
+
+  }
+
+  sortResult(prop : string,asc: boolean){
+    this.EmployeeList = this.EmployeeListWithoutFilter.sort(function(a,b){
+      if(asc){
+          return (a[prop]>b[prop])?1 : ((a[prop]<b[prop]) ?-1 :0);
+      }else{
+        return (b[prop]>a[prop])?1 : ((b[prop]<a[prop]) ?-1 :0);
+      }
+    });
   }
 }
